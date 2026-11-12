@@ -61,8 +61,8 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onQueryTextChange(newText: String?): Boolean {
-                if (!newText.isNullOrBlank() && newText.length >= 2) {
-                    searchPeliculas(newText.trim())
+                if (!newText.isNullOrBlank() && newText.length >= 2) {  // Aunque el limite esta en 2 caracteres para buscar,
+                    searchPeliculas(newText.trim())             // no encontraran peliculas como UP o IT por tener pocos caracteres y tener cientos de coincidencias
                 }
                 return true
             }
